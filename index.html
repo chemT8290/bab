@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>밥 속의 당을 색으로 재고, 점도를 구슬로 재다 — 쉽게 보는 저당 밥솥 과학</title>
+<title>밥 속의 당을 색과 구슬로 재다 — 쉽게 보는 저당 밥솥 과학</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Do+Hyeon&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -184,6 +184,32 @@
   .a em{font-style:normal;background:#f3e4c4;padding:0 3px;border-radius:3px}
   .hidden{display:none !important}
 
+  /* judge's eye */
+  .gap-vis{display:grid;grid-template-columns:1fr auto 1fr;align-items:stretch;margin:16px 0;border-radius:12px;overflow:hidden;border:1px solid var(--line)}
+  @media(max-width:620px){.gap-vis{grid-template-columns:1fr}}
+  .gap-col{padding:15px 17px}
+  .gap-col.meas{background:var(--iodine-soft)} .gap-col.concl{background:var(--dns-soft)}
+  .gap-col h5{font-family:'Do Hyeon';font-size:.92rem;margin-bottom:9px}
+  .gap-col.meas h5{color:var(--iodine)} .gap-col.concl h5{color:var(--dns)}
+  .gap-col ul{list-style:none;font-size:.88rem;display:flex;flex-direction:column;gap:7px}
+  .gap-col li{padding-left:15px;position:relative;line-height:1.5}
+  .gap-col li::before{content:'·';position:absolute;left:3px;font-weight:700}
+  .gap-mid{display:grid;place-items:center;background:var(--rice);padding:0 16px;font-size:.74rem;color:var(--muted);text-align:center;font-family:'Do Hyeon';line-height:1.45}
+  @media(max-width:620px){.gap-mid{padding:10px}}
+  .judge{background:var(--paper);border:1px solid var(--line);border-radius:12px;margin-bottom:10px;overflow:hidden;border-left:4px solid #475569}
+  .judge.hot{border-left-color:var(--dns)}
+  .jq{width:100%;text-align:left;background:none;border:none;cursor:pointer;font-family:inherit;color:var(--ink);display:flex;align-items:flex-start;gap:11px;padding:14px 16px;line-height:1.5}
+  .jsev{flex-shrink:0;font-size:.95rem;padding-top:1px}
+  .jqt{flex:1;font-weight:500;font-size:1rem}
+  .jchev{flex-shrink:0;color:var(--muted);font-size:1.25rem;transition:transform .2s}
+  .judge.open .jchev{transform:rotate(45deg)}
+  .ja{max-height:0;opacity:0;overflow:hidden;transition:max-height .3s,opacity .25s,padding .3s;padding:0 16px 0 42px;font-size:.93rem}
+  .judge.open .ja{max-height:600px;opacity:1;padding:0 16px 15px 42px}
+  .ja .why{color:var(--muted);font-size:.88rem;margin:0 0 9px}
+  .ja .def{background:var(--good-soft);border-radius:8px;padding:11px 14px;font-size:.91rem;line-height:1.6}
+  .ja .def b{color:var(--good)}
+  .sev-legend{font-size:.82rem;color:var(--muted);margin:10px 0 4px}
+
   footer{text-align:center;color:var(--muted);font-size:.82rem;padding:40px 0 60px;border-top:1px solid var(--line);margin-top:30px}
 
   @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
@@ -205,7 +231,7 @@
   <header class="hero">
     <span class="bowl">🍚</span>
     <span class="eyebrow">부엌에서 시작한 화학 탐구</span>
-    <h1>밥 속의 당을<br><span class="c-d">색</span>으로 재고<br>점도를<span class="c-i">구슬</span>로 재다</h1>
+    <h1>밥 속의 당을<br><span class="c-d">색</span>으로 재고<br>점도를<br><span class="c-i">구슬</span>로 재다</h1>
     <p>저당 밥솥은 정말 밥의 당을 줄여 줄까? 줄인 밥은 왜 푸석할까? 이 질문을 푸는 데 쓰인 과학 원리와 계산을 직접 만지며 이해해 봅시다.</p>
     <div class="scroll-cue">아래로 내려가며 위젯을 만져 보세요 ↓</div>
   </header>
@@ -452,11 +478,11 @@
       <div class="calc">
         <span class="formula">밥 1g당 환원당량 = 농도 × 추출액 부피 × 희석배수 ÷ 밥 질량</span>
         <div class="step" style="margin-top:10px"><span class="s">1</span><span>농도 = 0.456 mg/mL <span class="sub">(검량선으로 구함)</span></span></div>
-        <div class="step"><span class="s">2</span><span>× 추출액 부피 10 mL × 희석배수 2 <span class="sub">(묽혔으면 다시 곱해 줌)</span></span></div>
+        <div class="step"><span class="s">2</span><span>× 추출액 부피 10 mL × 희석배수 5 <span class="sub">(묽혔으면 다시 곱해 줌)</span></span></div>
         <div class="step"><span class="s">3</span><span>÷ 사용한 밥 2.0 g</span></div>
         <div class="step"><span class="s">=</span><span class="res">약 11.4 mg/g</span></div>
       </div>
-      <div class="analogy"><span class="em">🔁</span><div><b>왜 희석배수를 곱할까?</b> — 색이 너무 진해 검량선 범위를 넘으면 물로 묽혀서 다시 재요. 2배 묽혔다면 원래는 2배 진했던 거니까, 계산할 때 다시 2를 곱해 줍니다. 위 숫자는 방법을 익히기 위한 <b>예시 값</b>이에요.</div></div>
+      <div class="analogy"><span class="em">🔁</span><div><b>왜 희석배수를 곱할까?</b> — 색이 너무 진해 검량선 범위를 넘으면 물로 묽혀서 다시 재요. 5배 묽혔다면 원래는 5배 진했던 거니까, 계산할 때 다시 5를 곱해 줍니다. 위 숫자는 방법을 익히기 위한 <b>예시 값</b>이에요.</div></div>
     </div>
 
     <div class="topic">
@@ -560,6 +586,7 @@
       <div class="analogy" style="background:var(--good-soft)"><span class="em">✅</span><div><b>그래서 구슬 낙하가 대표</b> — 같은 구슬·같은 통을 써서 표면장력이나 흡수성 같은 외부 요인 영향이 적고, 떨어지는 시간만 재면 돼서 가장 일정했어요(CV 2.2%). 또 스토크스 법칙이라는 분명한 물리 근거도 있고요.</div></div>
     </div>
   </section>
+
   <!-- PART 6 심사위원의 눈 -->
   <div class="part-tag"><span class="n">6</span><span class="t">심사위원의 눈<small>화학 전공자는 어디를 파고들까</small></span></div>
   <div class="part-rule"></div>
@@ -656,11 +683,6 @@
     </div>
   </section>
 
-
-
-
-
-  
   <div class="keymsg">
     <h3>한 장으로 끝내는 핵심 정리</h3>
     <ul>
@@ -671,6 +693,7 @@
       <li><b>저감률</b> = (일반−저당)÷일반×100 = 약 29.3%, 단 <b>기준에 따라 달라짐</b>.</li>
       <li><b>구슬 낙하</b>는 가장 일정(CV 2.2%)해 대표, <b>경사면·물방울</b>은 변동이 커 보조.</li>
       <li>최적 조건은 <b>C(불림 20분·물 90%)</b> — 저당 + 찰기를 함께 잡음.</li>
+      <li>심사위원의 시선: <b>'측정한 양'과 '결론 개념'의 간격</b>을 인정하고 상대 비교로 한정하면 방어가 단단해짐.</li>
     </ul>
   </div>
 
