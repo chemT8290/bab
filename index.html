@@ -560,7 +560,107 @@
       <div class="analogy" style="background:var(--good-soft)"><span class="em">✅</span><div><b>그래서 구슬 낙하가 대표</b> — 같은 구슬·같은 통을 써서 표면장력이나 흡수성 같은 외부 요인 영향이 적고, 떨어지는 시간만 재면 돼서 가장 일정했어요(CV 2.2%). 또 스토크스 법칙이라는 분명한 물리 근거도 있고요.</div></div>
     </div>
   </section>
+  <!-- PART 6 심사위원의 눈 -->
+  <div class="part-tag"><span class="n">6</span><span class="t">심사위원의 눈<small>화학 전공자는 어디를 파고들까</small></span></div>
+  <div class="part-rule"></div>
 
+  <section>
+    <div class="topic">
+      <h3><span class="ic ic-n">🔬</span>딱 한 문장으로 요약되는 시선</h3>
+      <p class="lead">화학을 전공한 심사위원은 "결과가 맞나"보다 "이 측정으로 그 결론을 말할 자격이 있나"를 봅니다.</p>
+      <p>거의 모든 까다로운 질문은 결국 한 곳으로 모여요 — <span class="hl-d">내가 실제로 '측정한 양'</span>과 <span class="hl-i">결론에서 '말하는 개념'</span> 사이에 간격이 있고, <b>그 간격을 발표자가 알고 있는가</b>입니다.</p>
+
+      <div class="gap-vis">
+        <div class="gap-col meas">
+          <h5>① 실제로 측정한 양</h5>
+          <ul>
+            <li>DNS 발색 = 환원 <b>말단</b>의 수</li>
+            <li>구슬 낙하 시간 = <b>겉보기(상대)</b> 점도</li>
+            <li>A620÷A530 = 표준물질 없는 <b>상대</b> 비율</li>
+          </ul>
+        </div>
+        <div class="gap-mid">간격<br>(GAP)<br>↔</div>
+        <div class="gap-col concl">
+          <h5>② 결론에서 쓰는 개념</h5>
+          <ul>
+            <li>"<b>탄수화물</b>이 줄었다"</li>
+            <li>"<b>점도</b>가 높다 = 찰지다"</li>
+            <li>"<b>아밀로스</b>가 많다/적다"</li>
+          </ul>
+        </div>
+      </div>
+      <div class="analogy"><span class="em">🧭</span><div><b>방어의 원칙</b> — 이 간격을 <b>먼저 인정하고</b>, 결론을 "상대 비교"로 한정해 말하면 방어는 탄탄합니다. 숨기려 하면 오히려 약점이 됩니다.</div></div>
+      <p class="sev-legend">아래 질문을 눌러 보세요. <b style="color:var(--dns)">🔴</b>는 가장 날카롭게 파고드는 핵심 질문, <span style="color:#475569">🟠</span>는 자주 나오는 질문이에요.</p>
+
+      <div class="judge hot">
+        <button class="jq" onclick="this.parentElement.classList.toggle('open')"><span class="jsev">🔴</span><span class="jqt">"DNS법은 환원 말단에 반응하는데, 이게 정말 '당의 양'인가요?"</span><span class="jchev">+</span></button>
+        <div class="ja">
+          <p class="why">왜 묻나 — α-아밀레이스는 전분을 포도당이 아니라 엿당·덱스트린으로 자릅니다. 그러면 DNS 신호는 '당 총량'이 아니라 사실상 '끊어진 결합 수 ≈ 분해된 정도'에 비례해요. 게다가 엿당은 포도당보다 무거워(342 vs 180) 포도당 검량선으로 환산한 mg은 실제 당 질량과 다릅니다.</p>
+          <div class="def"><b>방어</b> — "이 값은 전체 탄수화물 절대량이 아니라, <b>아밀레이스 처리로 새로 생성된 환원 말단의 상대량</b>을 포도당 기준으로 환산한 것입니다. 모든 시료에 같은 환산을 적용했으므로 일반 밥과 저당 밥의 <b>상대 비교</b>는 유효합니다."</div>
+        </div>
+      </div>
+
+      <div class="judge hot">
+        <button class="jq" onclick="this.parentElement.classList.toggle('open')"><span class="jsev">🔴</span><span class="jqt">"검량선 범위(0.1~0.5)를 벗어난 시료를 그 식에 그대로 넣었나요?"</span><span class="jchev">+</span></button>
+        <div class="ja">
+          <p class="why">왜 묻나 — 비어–람베르트 직선성은 고농도에서 깨집니다. 검증되지 않은 구간을 외삽(extrapolation)한 값은 신뢰하기 어려워요. 화학 전공자가 거의 반드시 짚는 지점입니다.</p>
+          <div class="def"><b>방어</b> — "외삽이 포함된 점은 명백한 한계로 인정합니다. 후속 실험에서는 시료를 <b>더 희석해 검량선 범위 안으로</b> 들여 보간(interpolation)으로 계산하거나, 표준용액 범위를 넓혀 직선성을 먼저 확인하겠습니다."</div>
+        </div>
+      </div>
+
+      <div class="judge hot">
+        <button class="jq" onclick="this.parentElement.classList.toggle('open')"><span class="jsev">🔴</span><span class="jqt">"구슬 낙하로 잰 게 스토크스 법칙으로 설명되나요? 전제는 맞췄나요?"</span><span class="jchev">+</span></button>
+        <div class="ja">
+          <p class="why">왜 묻나 — 스토크스 법칙은 뉴턴 유체·층류·무한히 넓은 매질·종단속도 도달을 가정합니다. 밥물은 비뉴턴 유체이고, 좁은 통이라 벽 효과가 있으며, 짧은 낙하라 종단속도 도달도 불확실해요. 그래서 절대 점도가 아닙니다.</p>
+          <div class="def"><b>방어</b> — "절대 점도가 아니라 <b>겉보기(상대) 점도 지표</b>로 해석했습니다. 세 측정의 순위가 달랐던 것도 <b>전단속도가 방법마다 달라</b> 겉보기 점도가 다르게 나오는 비뉴턴 유체의 특성 때문입니다. 그래서 재현성(CV)이 가장 높은 구슬 낙하를 대표로 삼아 상대 비교만 했습니다."</div>
+        </div>
+      </div>
+
+      <div class="judge">
+        <button class="jq" onclick="this.parentElement.classList.toggle('open')"><span class="jsev">🟠</span><span class="jqt">"효소 분해가 시료마다 똑같이(완전히) 일어난 걸 어떻게 보장하죠?"</span><span class="jchev">+</span></button>
+        <div class="ja">
+          <p class="why">왜 묻나 — 분해도가 시료마다 다르면 환원 말단 수도 달라져 비교 자체가 흔들립니다. 효소:기질 비율, 반응이 평형에 도달했는지 등을 확인했는지 봅니다.</p>
+          <div class="def"><b>방어</b> — "완전 분해를 보장하긴 어려워 <b>절대량이 아닌 동일 조건 상대 비교</b>로 해석했습니다. 효소량·온도·시간·pH를 모든 시료에 같게 적용해, 분해율이 100%가 아니어도 두 밥의 차이는 유효합니다. 시간에 따른 분해 평형(plateau) 확인은 보완할 점입니다."</div>
+        </div>
+      </div>
+
+      <div class="judge">
+        <button class="jq" onclick="this.parentElement.classList.toggle('open')"><span class="jsev">🟠</span><span class="jqt">"아이오딘은 왜 하필 620·530nm인가요? 표준물질 보정은요?"</span><span class="jchev">+</span></button>
+        <div class="ja">
+          <p class="why">왜 묻나 — 아밀로스–아이오딘 복합체의 최대 흡수 파장은 사슬 길이에 따라 연속적으로 변합니다. 두 파장 선택이 임의적일 수 있고, 표준물질 보정이 없으면 절대 함량은 알 수 없어요.</p>
+          <div class="def"><b>방어</b> — "순수 아밀로스 표준물질로 검량선을 만들지 않았으므로 <b>절대 함량이 아닌 상대 지표</b>로만 썼습니다. 더구나 이 비율의 CV가 네 측정 중 가장 높아(~15%) 재현성이 낮았기 때문에, 핵심 판단은 점도에 두고 아이오딘은 <b>보조 단서</b>로만 활용했습니다."</div>
+        </div>
+      </div>
+
+      <div class="judge">
+        <button class="jq" onclick="this.parentElement.classList.toggle('open')"><span class="jsev">🟠</span><span class="jqt">"반복 횟수와 통계 검정(t-검정)은 했나요?"</span><span class="jchev">+</span></button>
+        <div class="ja">
+          <p class="why">왜 묻나 — 연구자는 평균만이 아니라 n수와 유의성을 봅니다. 차이가 우연(오차)인지 통계로 뒷받침되는지 확인하려는 거예요.</p>
+          <div class="def"><b>방어</b> — "평균 차이(11.36 대 8.04)가 표준편차보다 훨씬 커 우연으로 보기 어렵다고 정성적으로 판단했습니다. 다만 <b>정식 t-검정을 못 한 것은 한계</b>이며, 반복수를 늘려 유의성 검정을 더하는 것을 후속 과제로 두었습니다."</div>
+        </div>
+      </div>
+
+      <div class="judge">
+        <button class="jq" onclick="this.parentElement.classList.toggle('open')"><span class="jsev">🟠</span><span class="jqt">"물을 줄여 환원당이 낮아진 게, 전분이 덜 분해된 건가요 아니면 그냥 희석 차이인가요?"</span><span class="jchev">+</span></button>
+        <div class="ja">
+          <p class="why">왜 묻나 — 교란변수 질문입니다. 수분을 직접 재지 않으면 '전분 감소 효과'와 '수분 희석 효과'를 분리할 수 없어요.</p>
+          <div class="def"><b>방어</b> — "두 효과를 완전히 분리하지 못한 점을 인정합니다. <b>수분 함량을 측정해 건조고형분 기준으로 재계산</b>하면 더 깨끗하게 가를 수 있고, 배출 전분물의 성분까지 재면 인과를 더 분명히 할 수 있습니다."</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="topic" style="border-color:var(--good);background:var(--good-soft)">
+      <h3><span class="ic ic-k">👍</span>반대로, 심사위원이 점수를 주는 부분</h3>
+      <p class="lead">약점만 있는 게 아니에요. 다음은 고등학생 수준을 넘는 강점으로 평가받을 지점입니다.</p>
+      <p>① 같은 데이터를 <b>1g당·전체·건조고형분·제품 기준</b>으로 나눠 "저감률이 기준 따라 달라진다"를 정직하게 드러낸 것, ② <b>CV(정밀도)와 정확도를 구분</b>하고 정확도는 검량선 보정으로 따로 확보한 것, ③ <b>재현성(CV)이라는 사전 기준</b>으로 대표 측정을 고른 것. 이건 측정을 한 단계 위에서 바라보는 '측정의 메타 인지'라 화학 전공자가 가장 좋아하는 태도예요.</p>
+    </div>
+  </section>
+
+
+
+
+
+  
   <div class="keymsg">
     <h3>한 장으로 끝내는 핵심 정리</h3>
     <ul>
