@@ -392,7 +392,7 @@
         <span class="formula">농도 = (흡광도 − 절편) ÷ 기울기</span>
       </div>
       <div class="lab">
-        <div class="lab-title">흡광도를 움직이면 농도가 계산돼요 (예시 검량선: 흡광도 = 0.92 × 농도 + 0.03)</div>
+        <div class="lab-title">흡광도를 움직이면 농도가 계산돼요 (예시 검량선: 흡광도 = 1.13 × 농도 -0.0558)</div>
         <div class="lab-row">
           <div style="flex:0 0 240px;max-width:100%">
             <svg id="calGraph" viewBox="0 0 240 200" style="width:100%;height:auto;background:#fff;border-radius:10px;border:1px solid var(--line)">
@@ -411,7 +411,7 @@
             <input type="range" id="calSlider" min="10" max="50" value="45" aria-label="흡광도 조절">
             <div class="calc" style="margin-top:12px">
               <div class="step"><span class="s">1</span><span>흡광도 = <b id="calA">0.45</b></span></div>
-              <div class="step"><span class="s">2</span><span>농도 = (<span id="calA2">0.45</span> − 0.03) ÷ 0.92</span></div>
+              <div class="step"><span class="s">2</span><span>농도 = (<span id="calA2">0.45</span> +0.0558) ÷ 1.13</span></div>
               <div class="step"><span class="s">3</span><span class="res">농도 = <span id="calC">0.457</span> mg/mL</span></div>
             </div>
             <div class="lab-note">검량선 식(기울기·절편)은 실험마다 달라요. 위 식은 원리를 익히기 위한 <b>예시 값</b>입니다. 실제로는 측정값이 검량선 범위(이 연구는 0.1~0.5mg/mL) 안에 들어와야 믿을 수 있어요.</div>
